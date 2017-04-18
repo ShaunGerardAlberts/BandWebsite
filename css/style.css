@@ -1,0 +1,207 @@
+@import 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans:400,700';
+
+body {
+  background: url(../images/background.jpg) repeat 0 0;
+  font-family: 'Open sans', 'Amatic SC';
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+#page {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/****************************     font sizing   ****************************************/
+
+h1 { font-size: 1.6em; }
+h2 { font-size: 1.4em; padding-bottom: 20px; }
+h3 { font-size: 1.2ems; }
+
+/****************************    header section  ***************************************/
+header { width: 100%; height: 250px; background-image: url("../images/logo.png"); background-repeat: no-repeat;
+        background-position: center center; background-size: 60%; }
+
+/****************************************************************************************/
+/****************************  Nav section   ********************************************/
+nav { background-color: black; color: white; font-weight: normal; width: 100%; position: relative; } /** #debe8a **/
+nav::after { content: ''; display: block; clear: both; }
+nav ul { list-style: none; margin: 0; }
+nav ul li:hover {  }
+nav ul li:hover > ul { display: block; background-color: black; } /** display the only the 1st ul of any ul li that is being hovered over, so any li being hovered over
+                    display that elements children ul's **/
+nav ul li a { display: inline-block; padding: 10px 20px; text-decoration: none; width: 160px; color: white; position: relative; }
+nav ul li a:visited { color: white;  }
+nav ul li a:hover { background-color: #e0e0e0; color: black; }
+nav ul ul { position: absolute; top: 100%; background-color: tan; display: none; } /** by using absolute position here, we are putting it directly
+            after its nav elements, we dont want this to be included in the height of its parent(nav) by removing it from normal
+            document flow(absolute: position) this is what happens.**/ /** hide all ul within a ul it so that its not visible until user hover over it **/
+nav ul ul li { position: relative; } /** want the 3rd level ul to be positioned relative to ul ul li **/
+nav ul ul ul { left: 100%; top: 0%; } /** move over 100% of the width of its parent - the ul ul li **/
+/** top level **/
+nav > ul { } /** target ul if it is immediately the child of the nav element **/
+nav > ul > li { float: left; } /** need nav > ul - cause dont want to target all the ul elemets in the nav here **/
+nav > ul > li > a { width: auto; padding: 18px 20px 20px 20px; }
+
+/** add arrows to nav with content **/
+nav a[aria-haspopup="true"]::after { content: ""; display: absolute; width: 0px; height: 0px; position: absolute; top: 10 px; right: 20px;
+      border-top: 4px solid transparent; border-bottom: 4px solid transparent; border-left: 4px solid #686868; }
+nav > ul > li > a[aria-haspopup="true"]::after { border-bottom:  none; border-left: 4px solid transparent; border-right: 4px solid transparent;
+      border-top: 4px solid #686868; bottom: 6px; left: 40px; right: auto; top: auto; }
+/****************************************************************************************/
+section.main-column div.content { padding: 30px 30px; }
+/********************************* first column *****************************************/
+section.main-column { color: black; width: 60%; float: left; margin: 12px 0; }
+
+section.main-column article { background-color: #191818; margin-bottom: 30px; /**opacity: .4;**/ } /**  background-color: #2c231A **/
+/*section.main-column article img { display: block; margin: 0 auto; padding-top: 30px; padding-bottom: 30px; width: 60%; }*/
+section.main-column aside { background-color: none; padding-bottom: 0px; width: 100%; }
+
+section.main-column article div { background-image: url("../images/aus_tour_Big.svg"); background-repeat: no-repeat; background-size: 60%;
+                background-position: 47% 70%; height: 500px; color: white; }
+section.main-column article div h2 { padding-bottom: 0; }
+
+section.main-column div.purchase-tickets { position: relative; margin-left: 8%; }
+section.main-column div.purchase-tickets img.flag-one { display: inline-block; position: absolute; top: 20px; left: 6%; width: 13%; }
+
+section.main-column div.purchase-tickets a.btn { font-size: 1.2em; text-decoration: none; color: white; background-color: #00147F;
+  border: 1px solid #fff; transition: background-color .5s; margin-bottom: 30px; padding-left: 15px; padding-right: 15px;
+  padding-top: 20px; padding-bottom: 20px; text-align: center; display: inline-block; width: 80%; border-radius: 20px; }
+section.main-column div.purchase-tickets a.btn:hover { background-color: white; color: blue; }
+
+section.main-column div.purchase-tickets a.btn span { display: block; }
+
+section.main-column div.purchase-tickets img.flag-two { display: inline-block; position: absolute; top: 20px; left: 64%; width: 13%; }
+
+/** the featured video section **/
+section.main-column aside h2 { margin-left: 30px; }
+section.main-column aside img { width: 100%; }
+section.main-column aside video { width: 100% }
+section.main-column aside div.content { background-color: black; padding: 0;}
+/*********************************  second column ***************************************/
+section.side-column div.content {  }
+section.side-column { float: right; width: 37%; color: black; margin-top: 12px; }
+
+section.side-column article.news-letter { background-color: none; margin-bottom: 30px; padding: 30px 20px 30px 30px; }
+/* form */
+section.side-column article.news-letter form { position: relative; }
+section.side-column article.news-letter form div { padding-bottom: 12px; }
+section.side-column article.news-letter form label { padding: 5px; display: inline-block; }
+section.side-column article.news-letter form input { width: 140px; display: inline-block; position: absolute; left: 70px; padding: 5px;}
+section.side-column article.news-letter form button { padding: 5px 20px; margin-left: 70px; }
+/* end form */
+
+section.side-column aside.upcoming-tour { background-color: none; margin-bottom: 30px; padding: 2px 20px 30px 30px; }
+section.side-column aside.instagram { background-color: none; margin-bottom: 30px; padding-left: 30px; }
+
+section.side-column aside.upcoming-tour img { width: 103%; }
+
+section.side-column aside.instagram img { display: inline-block; /*height: 175px;*/ width:48.25% }
+
+
+
+/*********************************  footer **********************************************/
+footer::before { content: ''; display: block; clear: both; }
+
+footer ul { background-color: black; margin-top: 10px; padding-top: 30px; padding-bottom: 30px; } /* #2c231A */
+footer ul li { display: inline-block; width: 20%; margin-left: 13%; margin-top: 8px;}
+footer ul li a { text-decoration: none; font-size: 1.3em; font-weight: normal; padding: 5px 15px; color: white; } /* color: green; */
+footer ul li a:hover { font-weight: bold; text-decoration: underline; color: #686868; /*background-color: tan;*/ }
+footer ul li a:visited { color: none;}
+/****************************************************************************************/
+
+
+/*****************************************   Media Queries ******************************/
+/** First break point, targeted desin rather than device **/
+@media screen and (max-width: 1219px) {
+  #page {
+    width: 98%;
+  }
+
+  section.main-column article div { background-size: 65%; }
+  section.side-column article.news-letter form input { width: 120px; }
+}
+/** At 1069px design breaks, thus changed it at 1070px;*/
+@media screen and (max-width: 1070px) {
+  section.main-column { width: 68%; margin-right: 0; }
+  section.main-column article div { background-size: 75%; }
+  section.main-column div.content { color: pink; padding: 12px 15px; }
+  section.main-column div.purchase-tickets a.btn { padding-top: 15px; padding-bottom: 15px; }
+  section.main-column div.purchase-tickets img.flag-one { top: 19%; }
+  section.main-column div.purchase-tickets img.flag-two { top: 19%; left: 68%;  }
+
+  section.side-column { width: 30%; margin-right: 0; padding: 0}
+  section.side-column article.news-letter { padding: 2px 10px 30px 10px; }
+  section.side-column aside.upcoming-tour { padding: 2px 10px 30px 10px; }
+  section.side-column aside.instagram { padding: 2px 10px 30px 10px; }
+
+  footer {  }
+  footer ul { margin-top: 10px; padding-top: 20px; padding-bottom: 20px; height: 100px; }
+  footer ul li { display: block; margin-bottom: 10px; }
+  footer ul li a { font-size: 1.1em; padding: 5px 10px; }
+
+  footer ul div.footer_col_1 { width: 40%; margin-left: 10%; }
+  footer ul div.footer_col_2 { width: 40%; margin-right: 5%; }
+  footer ul div.footer_col_1 { float: left; }
+  footer ul div.footer_col_2 { float: right; }
+
+  footer ul div.footer_col_2::after {content: ''; display: block; clear: both; }
+}
+
+@media screen and (max-width: 695px) {
+  section.main-column div.content { color: yellow; }
+  section.main-column article div { background-size: 85%; height: 450px; }
+
+  section.side-column article.news-letter form input { width: 100px }
+}
+/
+@media screen and (max-width: 695px) {
+  section.main-column div.content { color: lightgreen; padding: 12px 15px; }
+  section.side-column article.news-letter form input { width: 70px;  }
+
+}
+@media screen and (max-width: 560px) {
+  header { background-size: 80%; height: 120px;}
+
+  section.main-column { float: none; width: 100%; }
+  section.main-column article div { background-size: 80%; height: 420px; }
+  section.main-column aside h2 { margin-left: 10px; }
+
+  section.main-column div.purchase-tickets { margin-left: 0; }
+  section.main-column div.purchase-tickets a.btn { padding-top: 10px; padding-bottom: 10px; width: 95%; margin: 20px 0 60px 0;
+          padding-left: 0; border-radius: 5px; }
+  section.main-column div.purchase-tickets img.flag-one { top: 27%; }
+  section.main-column div.purchase-tickets img.flag-two { top: 27%; left: 80%; }
+
+  section.side-column { float: none; width: 100%; }
+  section.side-column article.news-letter { margin-bottom: 20px; margin-top: 40px; padding-bottom: 10px; }
+  section.side-column article.news-letter form input { width: 130px; }
+
+  section.side-column aside.instagram { margin-bottom: 0px; padding-bottom: 100px;}
+  footer { display: none; }
+
+  /********* navigation ********/
+  nav { position: absolute; width: 100%; bottom: -280px; background-color: black; }
+  nav ul { display: block; width: 100%; color: black; }
+  nav > ul {padding: 0; }
+  nav ul li { padding-left: 10px; width: 70%}
+  nav > ul > li a { background-color: black; color: white; width: 100%;  border-bottom: 1px solid white; margin-bottom: 3px; }
+  nav ul li a:hover { background-color: white; color: black; }
+  /*nav ul li:hover { width: 90%; background-color: yellow; color: blue ; }*/
+  /*nav > ul > li a:hover { width: 90%; background-color: white; color: black; }*/
+  nav ul ul li { display: none; }
+
+  nav > ul > li { float: none; margin-top: 0; padding-top: 5px; }
+
+  /** remove arrorws **/
+  nav a[aria-haspopup="true"]::after { border-left: 4px solid transparent; }
+  nav > ul > li > a[aria-haspopup="true"]::after { border-top: 4px solid transparent; }
+  /***************** end of nav *********************/
+
+  section.side-column aside.upcoming-tour { display: none; }
+  section.side-column aside.instagram div.remove_mobile { display: none; }
+}

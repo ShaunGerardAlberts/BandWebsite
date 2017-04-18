@@ -1,0 +1,65 @@
+article.gallery { padding-top: 15px; margin-top: 15px; background-color: none; color: black; }
+article.gallery h2 { margin-left: 2%; }
+article.gallery img { width: 20%; margin: 2%; border: 4px solid black; }
+article.gallery img.gallery_9 { display: inline-block; }
+
+div.content { color: black; }
+article div.contact_form form textarea[type=text] { width: 58%; height: 150px; padding: 14px 20px; }
+
+article.news-letter_contact { float: left; width: 25%; background-color: auto; margin-left: 35px; }
+article.news-letter_contact form { background-color: auto; margin-left: 15px; font-weight: bold; }
+article.news-letter_contact form input { width: 40%; display: inline-block; box-sizing: border-box; margin: 3px 0; }
+article.news-letter_contact form button { padding: 5px 12px;}
+aside.upcoming-tour_contact { float: left; width: 30%; background-color: yellow; margin-left: 40px;}
+aside.upcoming-tour_contact img { width: 80%; margin-left: 30px; }
+aside.instagram_contact { float: right; width: 30%; background-color: grey; }
+aside.instagram_contact img { width: 39%; padding-left: 17px;}
+
+/*aside.instagram_contact img[src="images/aside_insta/seether_image4_220.jpg"] { padding-left: 15px; }*/
+
+aside.instagram_contact::after { content: ""; display: block; clear: both; }
+
+@media screen and (max-width: 1215px) {
+  article.gallery { }
+  article.gallery img { width: 20%; margin: 1.8%; }
+}
+
+@media screen and (max-width: 900px) {
+    article.gallery img { width: 20%; margin: 1.6%; }
+
+    article.gallery { }
+
+    aside.upcoming-tour_contact { width: 45%; }
+    aside.instagram_contact { width: 45%; }
+}
+
+@media screen and (max-width: 683px) {
+  article.gallery { }
+  article.gallery img { width: 44%; margin: 1.8%; }
+  article.gallery img.gallery_9 {  }
+}
+
+@media screen and (max-width: 557px) {
+  article.gallery img { width: 44%; margin: 1.6%; }
+
+  /********* navigation ********/
+  nav { position: absolute; width: 100%; bottom: -395px; background-color: black; }
+  /***************** end of nav *********************/
+  /*article.gallery img.gallery_9 { border-color: red; padding-bottom: 300px; }*/
+}
+
+@media screen and (max-width: 391px) {
+  article.gallery img { width: 42.5%; margin: 1.6%; }
+}
+/*
+@media screen and (max-width: 625px) {
+  article.gallery { background-color: orange; }
+}
+@media screen and (max-width: 560px) {
+  article.gallery { background-color: purple; }
+
+  aside.upcoming-tour_contact { float: none; display: block; margin-left: 0; width: 98%; padding-left: 0%; }
+  aside.upcoming-tour_contact img { width: 70%; margin-left: 13%; }
+  aside.instagram_contact { float: none; display: block; width: 98%; margin-left: 0%; height: 320px; }
+ }
+*/

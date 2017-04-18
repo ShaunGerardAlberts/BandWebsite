@@ -1,0 +1,104 @@
+section article { float: left; width: 60%; margin: 0; }
+
+section aside { width: 35%; float: right } /** new aside column*/
+section aside div.content { margin-top: 15px; }
+section aside img { width: 49%; }
+section aside div div.remove { display: inline; }
+
+div.fms {
+  display: block;
+  clear: both;
+  margin-bottom: 30px;
+}
+
+article div.contact_form { background-color: none; color: black; width: 65%; /*#191818*/
+      margin: 0; padding: 15px 15px 60px 15px; margin-top: 15px; font-weight: bold; }
+
+article div.contact_form form { margin-left: 50px; padding-top: 20px; }
+
+article div.contact_form form input[type=text] {
+  width: 80%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+  border: 1px solid #ccc; border-radius: 0px; box-sizing: border-box; }
+
+article div.contact_form form input[type=submit] {
+  width: 80%; background-color: #4CAF50; color: white; padding: 14px 20px; margin: 8px 0;
+  border: none; border-radius: 0px; cursor: pointer; }
+
+article div.contact_form form input[type=submit]:hover { background-color: #45a049; }
+
+div.content { color: black; }
+article div.contact_form form textarea[type=text] { width: 80%; padding: 12px 20px;
+      margin: 8px 0; display: inline-block; border: 1px solid #ccc;
+      border-radius: 0px; box-sizing: border-box; height: 180px; }
+
+article.news_contact { float: left; width: 25%; background-color: auto; margin-left: 35px; }
+article.news_contact form { background-color: auto; margin-left: 15px; font-weight: bold; }
+article.news_contact form input { width: 60%; display: inline-block; box-sizing: border-box; margin: 3px 0; padding: 8px; }
+article.news_contact form label { display: inline-block; }
+article.news_contact form button { padding: 5px 12px;}
+aside.upcoming-tour_contact { float: left; width: 30%; background-color: none; margin-left: 40px;}
+aside.upcoming-tour_contact img { width: 80%; margin-left: 30px; }
+aside.instagram_contact { float: right; width: 30%; background-color: none; }
+aside.instagram_contact img { width: 39%; padding-left: 17px;}
+
+/*aside.instagram_contact img[src="images/aside_insta/seether_image4_220.jpg"] { padding-left: 15px; }*/
+
+aside.instagram_contact::after { content: ""; display: block; clear: both; }
+
+@media screen and (max-width: 1100px) {
+  article div.contact_form { width: 75%; }
+  article div.contact_form form input[type=text] { width: 80%; }
+  article.news_contact { display: none; float: none; }
+  article div.contact_form form input[type=submit] { width: 80%; }
+  article div.contact_form form textarea[type=text] { width: 80%; }
+}
+
+@media screen and (max-width: 900px) {
+    article div.contact_form { width: 85%; }
+    article div.contact_form form input[type=text] { width: 80%; }
+    article div.contact_form form input[type=submit] { width: 80%; }
+    article div.contact_form form textarea[type=text] { width: 80%; }
+
+    aside.upcoming-tour_contact { width: 45%; }
+    aside.instagram_contact { width: 45%; }
+}
+@media screen and (max-width: 819px) {
+  article div.contact_form { width: 95%; }
+  article div.contact_form form input[type=text] { width: 80%; }
+  article div.contact_form form input[type=submit] { width: 80%; }
+  article div.contact_form form textarea[type=text] { width: 80%; }
+}
+@media screen and (max-width: 755px) {
+  section aside img { width: 70%; margin-left: 29.5%; }
+  section aside div div.remove { display: none; }
+
+  article div.contact_form form input[type=text] { width: 100%; }
+  article div.contact_form form input[type=submit] { width: 100%; }
+  article div.contact_form form textarea[type=text] { width: 100%; }
+}
+@media screen and (max-width: 625px) {
+
+}
+@media screen and (max-width: 560px) {
+  /** get rid of all the floats **/
+  section article { float: none; }
+  section aside { float: none; display: none; }
+  aside.instagram_contact { float: none; display: none; }
+  aside.upcoming-tour_contact { float: none; display: none; }
+
+  article div.contact_form { width: 100%; margin-bottom: 300px;}
+  section article { width: 100%; }
+  article div.contact_form form input[type=text] { width: 90%; }
+  article div.contact_form form input[type=submit] { width: 90%; }
+  article div.contact_form form textarea[type=text] { width: 90%; }
+  /*section article { float: none; }*/
+
+  article div.contact_form form input[type=text] { width: 73%; }
+  article div.contact_form form input[type=submit] { width: 73%; }
+  article div.contact_form form textarea[type=text] { width: 73% }
+
+  /********* navigation ********/
+  nav { position: absolute; width: 100%; bottom: -330px; background-color: black; }
+  /***************** end of nav *********************/
+
+ }

@@ -1,0 +1,37 @@
+@import 'https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans:400,700';
+
+#page { margin: 0.5cm; }
+
+body { color: #000; font-family: Georgia, "Times New Roman", Times, serif; font-size: 12pt;
+      font-weight: normal; }
+h1, h2, h3, h4 { font-family: "Open Sans", sans-serif; }
+
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1.1em; }
+
+p { font-size: .9em; margin-bottom: 1em; }
+
+a, a:visited { color: inherit; text-decoration: none; }
+/** display anchor links */
+a::after, a:visited::after { content: ' (' attr(href) ')'; font-size: italic; word-wrap: break-word; }
+
+
+nav { display: none; }
+header {  }
+header::after { content: url("../../images/logo.png"); }
+
+/********************************* gallery section *****************************************/
+article.gallery::before { font-size: 1.4em; margin-left: 30px; display: inline-block; }
+article.gallery { margin-bottom: 0px; }
+article.gallery h2 { height: 60px; margin-top: 100px; }
+article.gallery h4 { display: none;  }
+article.gallery div.item_container { display: inline-block; width: 28%; margin: 2%; }
+article.gallery div.item_container img { width: 100%;}
+
+footer { clear:both; }
+footer { display: block; margin-top: 80px; margin-left: 0; padding: 0; page-break-inside: avoid; }
+footer ul { margin-left: 20px; margin-top: 60px; padding: 0; font-size: 1.2em; }
+footer ul li { list-style: circle ; color: black; }
+footer ul li a { }

@@ -1,0 +1,67 @@
+article.gallery { padding-top: 15px; margin-top: 15px; background-color: none; color: black; }
+article.gallery h2 { margin-left: 2%; }
+article.gallery img { width: 20%; margin: 2%; /*border: 4px solid #282828;*/ }
+
+article.gallery div.item_container { position: relative; display: inline-block; width: 20%; margin: 2%; }
+article.gallery div.item_container img { width: 100%;}
+span.hover_price {
+  color: yellow;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  left: 32%;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  display: none;/*opacity: 0;*/
+}
+article.gallery div.item_container:hover > span.hover_price { /*opacity: 1;*/ display: inline; }
+
+div.content { color: black; }
+article div.contact_form form textarea[type=text] { width: 58%; height: 150px; padding: 14px 20px; }
+
+article.news-letter_contact { float: left; width: 25%; background-color: auto; margin-left: 35px; }
+article.news-letter_contact form { background-color: auto; margin-left: 15px; font-weight: bold; }
+article.news-letter_contact form input { width: 40%; display: inline-block; box-sizing: border-box; margin: 3px 0; }
+article.news-letter_contact form button { padding: 5px 12px; }
+aside.upcoming-tour_contact { float: left; width: 30%; background-color: yellow; margin-left: 40px; }
+aside.upcoming-tour_contact img { width: 80%; margin-left: 30px; }
+aside.instagram_contact { float: right; width: 30%; background-color: grey; }
+aside.instagram_contact img { width: 39%; padding-left: 17px; }
+
+/*aside.instagram_contact img[src="images/aside_insta/seether_image4_220.jpg"] { padding-left: 15px; }*/
+
+aside.instagram_contact::after { content: ""; display: block; clear: both; }
+
+@media screen and (max-width: 1215px) {
+  article.gallery { }
+  article.gallery div.item_container { width: 20%; margin: 1.8%; }
+}
+
+@media screen and (max-width: 900px) {
+    article.gallery div.item_container { width: 20%; margin: 1.6%; }
+
+    article.gallery { }
+
+    aside.upcoming-tour_contact { width: 45%; }
+    aside.instagram_contact { width: 45%; }
+}
+
+@media screen and (max-width: 683px) {
+  article.gallery { }
+  article.gallery div.item_container { width: 44%; margin: 1.8%; }
+}
+
+@media screen and (max-width: 557px) {
+span.hover_price { /*opacity: 1*/ display: inline; }
+  article.gallery div.item_container { width: 44%; margin: 1.6%; }
+
+  /********* navigation ********/
+  nav { position: absolute; width: 100%; bottom: -390px; background-color: black; }
+  /***************** end of nav *********************/
+  /*article.gallery img.gallery_9 { border-color: red; padding-bottom: 300px; }*/
+}
+
+@media screen and (max-width: 391px) {
+  article.gallery div.item_container { width: 42.5%; margin: 1.6%; }
+}

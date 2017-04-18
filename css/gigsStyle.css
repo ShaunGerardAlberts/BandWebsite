@@ -1,0 +1,67 @@
+section.main-column article div { height: 400px; color: white; background-image: none; }
+table {width: 95%; }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    margin: 50px auto;
+}
+th, td {
+    padding: 10px 20px;
+    text-align: left;
+}
+table th {
+    background-color: lightgrey;
+}
+table tr td a { color: blue; font-weight: bold; }
+table tr td a:visited { color: blue; }
+
+/*********************************  second column ***************************************/
+/* form */
+section.side-column article.news-letter form { position: relative; }
+section.side-column article.news-letter form input { width: 140px; display: inline-block; position: absolute; left: 70px;}
+section.side-column article.news-letter form button { padding: 5px 20px;}
+/* end form */
+
+/*****************************************   Media Queries ******************************/
+@media screen and (max-width: 890px) {
+  table {width: 85%; }
+
+  section.main-column { float: none; width: 100%; }
+  section.main-column article div { background-size: 80%; height: 420px; }
+  section.main-column aside h2 { margin-left: 10px; }
+
+  section.main-column div.purchase-tickets { margin-left: 0; }
+  section.main-column div.purchase-tickets a.btn { padding-top: 0px; padding-bottom: 0px; width: 95%; margin: 0;
+          padding-left: 0; border-radius: 5px; }
+  section.main-column div.purchase-tickets img.flag-one { top: 19%; }
+  section.main-column div.purchase-tickets img.flag-two { top: 19%; left: 80%; }
+
+  section.side-column { float: none; width: 100%; }
+  section.side-column article.news-letter { display: none; }
+
+  section.side-column aside.instagram { margin-bottom: 0px; padding-bottom: 100px;}
+  section.side-column aside.instagram div.remove_mobile { display: none; }
+  footer { display: none; }
+
+  section.side-column aside.upcoming-tour { display: none; }
+}
+
+@media screen and (max-width: 777px) {
+  section.main-column article div { height: 420px; }
+}
+
+@media screen and (max-width: 560px) {
+  section.main-column article div { height: 450px; }
+  table {width: 45%; }
+  table, th, td {
+      font-size: .9em;
+  }
+  th, td {
+      padding: 10px 10px;
+      text-align: left;
+  }
+  header { background-size: 70%; height: 140px;}
+}

@@ -1,0 +1,11 @@
+section.main-column article div { background-image: none; background-repeat: no-repeat;
+  background-size: 60%; background-position: 47% 70%; height: 500px; color: white; }
+section.main-column article div h2 { padding-bottom: 30px; margin-top: 30px; }
+section.main-column article div p { padding: 0 40px; word-spacing: 3px; letter-spacing: 1px; line-height: 20px; }
+
+@media screen and (max-width: 630px) {
+  section.main-column article div p { padding: 0 10px;}
+}
+@media screen and (max-width: 375px) {
+  section article div.content { height: auto; }
+}
